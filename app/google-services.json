@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "893388682080",
+    "project_id": "locklick-78ede",
+    "storage_bucket": "locklick-78ede.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893388682080:android:b34a8e30d8d96db0822405",
+        "android_client_info": {
+          "package_name": "com.example.locklink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqV05JuZA6kDqzITdFEG3ZdqJjP-ggObY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

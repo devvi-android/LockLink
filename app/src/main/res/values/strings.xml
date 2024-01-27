@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LockLink</string>
+    <string name="what_do_people_call_you">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="phone_format_xxx_xxx_xxxx">Phone format: 8 (XXX)XXX-XX-XX</string>
+    <string name="email_address">Email Address</string>
+    <string name="country">City</string>
+    <string name="short_text">Keep it short, this is just a demo</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">Sign in</string>
+    <string name="user_name">User Name</string>
+    <string name="register_text">Don’t have an account?</string>
+    <string name="register">Sign up</string>
+    <string name="or">OR</string>
+    <string name="logo">Logo</string>
+    <string name="did_you_forget_your_password">Forgot your password ?</string>
+    <string name="remember">Remember me</string>
+    <string name="reset_password">Reset password</string>
+    <string name="done">Done</string>
+
+    <string name="profile">Profile</string>
+    <string name="qr">QR</string>
+    <string name="logOut">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">Settings</string>
+    <string name="invite">Invite</string>
+    <string name="share_content">Please share with the application so that all your colleagues can download this application!</string>
+    <string name="message">Do you really want to exit their apps?</string>
+    <string name="no_btn">No</string>
+    <string name="yes_btn">Yes</string>
+</resources>

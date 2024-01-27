@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.Settings.SettingsFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/invite"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="44dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/invite"
+                android:textColor="@color/app_color"
+                android:textStyle="bold"
+                app:icon="@drawable/baseline_share_24"
+                app:iconGravity="start"
+                app:iconPadding="4dp"
+                app:iconSize="24dp"
+                app:iconTint="@color/app_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logOut"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="44dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/logOut"
+                android:textColor="@color/app_color"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_baseline_logout_24"
+                app:iconGravity="start"
+                app:iconPadding="4dp"
+                app:iconSize="24dp"
+                app:iconTint="@color/app_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/invite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>
