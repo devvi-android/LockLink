@@ -32,6 +32,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/textImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/app_color"
+                    android:text="@string/click_on_the_app_logo_and_select_a_profile_photo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/personName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/personImage"
+                    />
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/personImage"
                     android:layout_width="80dp"
@@ -40,8 +53,8 @@
                     android:src="@drawable/applogo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/personName"
-                    app:layout_constraintTop_toBottomOf="@id/registerTitle" />
+                    app:layout_constraintBottom_toTopOf="@id/textImage"
+                    app:layout_constraintTop_toBottomOf="@id/personName" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -60,7 +73,7 @@
                     app:layout_constraintBottom_toTopOf="@id/personPhone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/personImage"
+                    app:layout_constraintTop_toBottomOf="@id/textImage"
                     app:startIconDrawable="@drawable/ic_baseline_account_box_signin_24">
 
                     <com.google.android.material.textfield.TextInputEditText

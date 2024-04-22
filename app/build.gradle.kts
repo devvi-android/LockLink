@@ -56,4 +56,9 @@ dependencies {
 
     // CircleImageView
     implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    //QR generate
+    implementation("com.google.zxing:core:3.4.0")
+    implementation("com.journeyapps:zxing-android-embedded:3.6.0")
+
 }

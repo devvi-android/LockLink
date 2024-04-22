@@ -30,4 +30,12 @@
     <string name="message">Do you really want to exit their apps?</string>
     <string name="no_btn">No</string>
     <string name="yes_btn">Yes</string>
+    <string name="choose">Choose who you are?</string>
+    <string name="system">System</string>
+    <string name="employee">Employee</string>
+    <string name="admin">Admin</string>
+    <string name="generate">Generate</string>
+    <string name="scan">Scan</string>
+    <string name="click_on_the_app_logo_and_select_a_profile_photo">Click on the app logo and select a profile photo!</string>
+    <string name="officially_they_are">Officially, they are employees of this company and have all rights to use this application.</string>
 </resources>

@@ -122,7 +122,7 @@ class RegistrationActivity : AppCompatActivity() {
 
     private fun uploadInfo(imgUrl: String) {
         val user =
-            User(auth.uid.toString(), fullName.text.toString(), phoneNumber.text.toString(), imgUrl)
+            User(auth.uid.toString(), fullName.text.toString(), email.text.toString(), phoneNumber.text.toString(),imgUrl)
 
         database.reference.child("Users")
             .child(auth.uid.toString())
