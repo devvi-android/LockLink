@@ -9,6 +9,10 @@
         android:icon="@drawable/baseline_qr_code_scanner_24"
         android:title="@string/qr" />
     <item
+        android:id="@+id/events"
+        android:icon="@drawable/ic_baseline_event_24"
+        android:title="@string/events" />
+    <item
         android:id="@+id/settings"
         android:icon="@drawable/baseline_settings_24"
         android:title="@string/settings" />

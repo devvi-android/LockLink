@@ -1,23 +1,32 @@
 package com.example.locklink.ui.activities
 
+import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.example.locklink.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.tasks.Task
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
-    //    private lateinit var googleAuth: FirebaseAuth
-//    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var googleAuth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var progressBar: ProgressBar
 
     public override fun onStart() {
@@ -39,19 +48,19 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
         auth = Firebase.auth
-//        googleAuth = FirebaseAuth.getInstance()
-//
-//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//            .requestIdToken(getString(R.string.default_web_client_id))
-//            .requestEmail()
-//            .build()
-//
-//        googleSignInClient = GoogleSignIn.getClient(this, gso)
-//
-//        val googleSignIn = findViewById<MaterialButton>(R.id.googleSignIn)
-//        googleSignIn.setOnClickListener {
-//            signInGoogle()
-//        }
+        googleAuth = FirebaseAuth.getInstance()
+
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken("893388682080-rrl80ah17ak8sn1j8ai509o9g4p1km4r.apps.googleusercontent.com")
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        val googleSignIn = findViewById<MaterialButton>(R.id.googleSignIn)
+        googleSignIn.setOnClickListener {
+            signInGoogle()
+        }
 
         val registerBtn = findViewById<Button>(R.id.registerBtn)
         val resetPasswordBtn = findViewById<Button>(R.id.resetPasswordBtn)
@@ -111,47 +120,47 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-//    private fun signInGoogle() {
-//        val signInGoogle = googleSignInClient.signInIntent
-//        launcher.launch(signInGoogle)
-//    }
-//
-//    private val launcher =
-//        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-//            if (result.resultCode == Activity.RESULT_OK) {
-//                val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
-//                handlerResult(task)
-//            }
-//        }
-//
-//    private fun handlerResult(task: Task<GoogleSignInAccount>) {
-//        if (task.isSuccessful) {
-//            val account = task.result
-//            if (account != null) {
-//                updateUI(account)
-//            }
-//        } else {
-//            Toast.makeText(
-//                baseContext,
-//                "Error.",
-//                Toast.LENGTH_SHORT,
-//            ).show()
-//        }
-//    }
-//
-//    private fun updateUI(account: GoogleSignInAccount) {
-//        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-//        googleAuth.signInWithCredential(credential).addOnCompleteListener {
-//            if (it.isSuccessful) {
-//                val intent = Intent(this, MainActivity::class.java)
-//                startActivity(intent)
-//            } else {
-//                Toast.makeText(
-//                    baseContext,
-//                    "Error.",
-//                    Toast.LENGTH_SHORT,
-//                ).show()
-//            }
-//        }
-//    }
+    private fun signInGoogle() {
+        val signInGoogle = googleSignInClient.signInIntent
+        launcher.launch(signInGoogle)
+    }
+
+    private val launcher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+                handlerResult(task)
+            }
+        }
+
+    private fun handlerResult(task: Task<GoogleSignInAccount>) {
+        if (task.isSuccessful) {
+            val account = task.result
+            if (account != null) {
+                updateUI(account)
+            }
+        } else {
+            Toast.makeText(
+                baseContext,
+                "Error.",
+                Toast.LENGTH_SHORT,
+            ).show()
+        }
+    }
+
+    private fun updateUI(account: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+        googleAuth.signInWithCredential(credential).addOnCompleteListener {
+            if (it.isSuccessful) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(
+                    baseContext,
+                    "Error.",
+                    Toast.LENGTH_SHORT,
+                ).show()
+            }
+        }
+    }
 }

@@ -6,6 +6,39 @@
     app:startDestination="@id/profile">
 
     <fragment
+        android:id="@+id/addBlogFragment"
+        android:name="com.example.locklink.ui.fragments.Event.AddBlogFragment"
+        android:label="fragment_publish"
+        tools:layout="@layout/fragment_publish" />
+    <action
+        android:id="@+id/action_events_to_addBlogFragment"
+        app:destination="@id/addBlogFragment" />
+    <fragment
+        android:id="@+id/events"
+        android:name="com.example.locklink.ui.fragments.Event.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event">
+        <action
+            android:id="@+id/action_events_to_addBlogFragment"
+            app:destination="@id/addBlogFragment" />
+        <action
+            android:id="@+id/action_events_to_blogDetailFragment"
+            app:destination="@id/blogDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogDetailFragment"
+        android:name="com.example.locklink.ui.fragments.Event.BlogDetailFragment"
+        android:label="activity_blog_detail"
+        tools:layout="@layout/activity_blog_detail">
+
+        <argument
+            android:name="model"
+            app:argType="com.example.locklink.models.events.Model" />
+    </fragment>
+    <action
+        android:id="@+id/action_events_to_blogDetailFragment"
+        app:destination="@id/blogDetailFragment" />
+    <fragment
         android:id="@+id/profile"
         android:name="com.example.locklink.ui.fragments.Profile.ProfileFragment"
         android:label="fragment_qr"

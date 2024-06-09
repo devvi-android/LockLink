@@ -136,6 +136,33 @@
                 app:layout_constraintStart_toEndOf="@id/register_text"
                 app:layout_constraintTop_toBottomOf="@+id/signIn" />
 
+            <TextView
+                android:id="@+id/orText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/or"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerBtn" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/googleSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="30dp"
+                app:iconSize="36dp"
+                app:iconGravity="start"
+                app:iconPadding="4dp"
+                android:text="@string/google_auth"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orText"
+                />
+
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="?attr/progressBarStyle"

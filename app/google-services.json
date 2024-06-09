@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "893388682080",
+    "firebase_url": "https://locklick-78ede-default-rtdb.firebaseio.com",
     "project_id": "locklick-78ede",
     "storage_bucket": "locklick-78ede.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.locklink"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "893388682080-rrl80ah17ak8sn1j8ai509o9g4p1km4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.locklink",
+            "certificate_hash": "5bf109871ccae46cf9119eb137ce29e24cc46e5b"
+          }
+        },
+        {
+          "client_id": "893388682080-4ig8nh98p7if02i628mloiaq3c1d8ii8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDqV05JuZA6kDqzITdFEG3ZdqJjP-ggObY"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893388682080-4ig8nh98p7if02i628mloiaq3c1d8ii8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
